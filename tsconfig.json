@@ -1,0 +1,10 @@
+{
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "noImplicitThis": true,
+    "types": [
+      "vite/client",
+      "./types"
+    ]
+  }
+}
