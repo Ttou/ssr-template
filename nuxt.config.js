@@ -13,7 +13,9 @@ export default defineNuxtConfig({
         less: {
           javascriptEnabled: true,
           // @see https://gitee.com/ant-design-vue/ant-design-vue/blob/next/components/style/themes/default.less
-          modifyVars: {}
+          modifyVars: {
+            'primary-color': '#07c160'
+          }
         }
       },
       modules: {

@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "nuxi dev",
     "build": "nuxi build",
+    "generate": "nuxi generate",
     "start": "node .output/server/index.mjs",
+    "preview": "nuxi preview",
     "prepare": "husky install",
     "commit": "git add . && git cz",
     "format": "prettier \"src/**/*.{ts,tsx,vue}\" --write",
