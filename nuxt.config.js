@@ -2,6 +2,11 @@ import { defineNuxtConfig } from 'nuxt3'
 
 export default defineNuxtConfig({
   srcDir: 'src/',
+  app: {
+    head: {
+      link: [{ rel: 'icon', href: '/favicon.ico' }]
+    }
+  },
   vite: {
     css: {
       preprocessorOptions: {

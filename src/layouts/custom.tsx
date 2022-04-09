@@ -1,6 +1,11 @@
 export default defineComponent({
   name: 'LayoutCustom',
   render() {
-    return <div>{this.$slots.default?.()}</div>
+    return (
+      <div>
+        <h2>自定义布局</h2>
+        {this.$slots.default?.()}
+      </div>
+    )
   }
 })

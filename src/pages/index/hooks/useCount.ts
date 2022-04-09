@@ -1,4 +1,4 @@
-import { useMainStore } from '~~/src/store'
+import { useMainStore } from '@/store'
 
 export function useCount() {
   const mainStore = useMainStore()
