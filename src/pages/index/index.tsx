@@ -53,7 +53,11 @@ export default defineComponent({
         >
           其它
         </NuxtLink>
-        <Modal v-model:visible={this.showModal} title="弹窗">
+        <Modal
+          v-model:visible={this.showModal}
+          title="弹窗"
+          onOk={this.handleOk}
+        >
           <div>哈哈</div>
         </Modal>
       </div>

@@ -2,6 +2,7 @@
   "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
     "noImplicitThis": true,
+    "sourceMap": false,
     "types": [
       "vite/client",
       "./types"

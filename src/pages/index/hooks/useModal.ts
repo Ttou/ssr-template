@@ -5,8 +5,13 @@ export function useModal() {
     showModal.value = true
   }
 
+  function handleOk() {
+    showModal.value = false
+  }
+
   return {
     showModal,
-    handleOpen
+    handleOpen,
+    handleOk
   }
 }
