@@ -22,6 +22,10 @@ export default defineNuxtConfig({
       modules: {
         generateScopedName: '[local]__[hash:base64:5]'
       }
+    },
+    // @ts-expect-error: Missing ssr key
+    ssr: {
+      noExternal: ['compute-scroll-into-view', 'ant-design-vue']
     }
   },
   modules: ['@pinia/nuxt']
