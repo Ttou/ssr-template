@@ -7,18 +7,27 @@ import { useCount, useModal } from './hooks'
 import styles from './index.module.css'
 
 export default defineComponent({
-  setup() {
-    const title = ref('SSR Template')
+  async setup() {
+    const title = ref('')
 
     const { count, ...countExports } = useCount()
     const { showModal, ...modalExports } = useModal()
     const { showConfirm } = useDialog()
+
+    async function handleGetInfo() {
+      const { data } = await useAsyncData('info', () => $fetch('/api/info'))
+
+      title.value = data.value.title
+    }
 
     function handleShowConfirm() {
       showConfirm({
         content: '确认弹窗'
       })
     }
+
+    // 必须同步执行，否则客户端和服务端不匹配
+    await handleGetInfo()
 
     return {
       title,

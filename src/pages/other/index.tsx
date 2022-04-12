@@ -21,7 +21,9 @@ export default defineComponent({
       <NuxtLayout name="custom">
         <div class={styles.page}>
           <h3>其它页面</h3>
-          <Button onClick={this.handleBack}>返回</Button>
+          <Button type="dashed" onClick={this.handleBack}>
+            返回
+          </Button>
         </div>
       </NuxtLayout>
     )
