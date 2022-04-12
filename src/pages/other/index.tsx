@@ -1,4 +1,4 @@
-import { Button } from 'ant-design-vue/lib'
+import { Button } from 'ant-design-vue'
 
 import { NuxtLayout } from '#components'
 

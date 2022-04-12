@@ -1,4 +1,4 @@
-import { Button, Modal } from 'ant-design-vue/lib'
+import { Button, Modal } from 'ant-design-vue'
 
 import { useDialog } from '@/hooks'
 import { NuxtLink } from '#components'

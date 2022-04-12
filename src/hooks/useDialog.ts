@@ -1,4 +1,4 @@
-import { type ModalFuncProps, Modal } from 'ant-design-vue/lib'
+import { type ModalFuncProps, Modal } from 'ant-design-vue'
 
 export function useDialog() {
   function showConfirm(options?: ModalFuncProps) {
