@@ -13,6 +13,7 @@ export default defineComponent({
     const { count, ...countExports } = useCount()
     const { showModal, ...modalExports } = useModal()
     const { showConfirm } = useDialog()
+    const config = useRuntimeConfig()
 
     async function handleGetInfo() {
       const { data } = await useAsyncData('info', () => $fetch('/api/info'))

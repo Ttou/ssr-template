@@ -28,5 +28,9 @@ export default defineNuxtConfig({
       noExternal: ['compute-scroll-into-view', 'ant-design-vue']
     }
   },
-  modules: ['@pinia/nuxt']
+  modules: ['@pinia/nuxt'],
+  runtimeConfig: {
+    app: {},
+    public: {}
+  }
 })
