@@ -19,7 +19,7 @@
     "@pinia/nuxt": "0.1.8",
     "ant-design-vue": "3.2.3",
     "dayjs": "1.11.1",
-    "pinia": "2.0.13",
+    "pinia": "2.0.14",
     "vue": "3.2.33"
   },
   "devDependencies": {
