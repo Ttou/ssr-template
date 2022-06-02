@@ -26,6 +26,8 @@ export default defineComponent({
       console.log(data)
     }
 
+    handleGetInfo()
+
     return {
       title,
       handleShowConfirm,

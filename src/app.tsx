@@ -1,5 +1,3 @@
-import './app.css'
-
 import { ConfigProvider } from 'ant-design-vue'
 
 import { useConfig } from './hooks'

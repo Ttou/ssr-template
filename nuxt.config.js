@@ -7,7 +7,7 @@ export default defineNuxtConfig({
       link: [{ rel: 'icon', href: '/favicon.ico' }]
     }
   },
-  css: ['ant-design-vue/dist/antd.less'],
+  css: ['ant-design-vue/dist/antd.less', '@/assets/css/main.css'],
   vite: {
     css: {
       preprocessorOptions: {
@@ -26,11 +26,8 @@ export default defineNuxtConfig({
     // @ts-expect-error: Missing ssr key
     ssr: {
       noExternal: ['compute-scroll-into-view', 'ant-design-vue']
-    }
+    },
+    logLevel: 'error'
   },
-  modules: ['@pinia/nuxt'],
-  runtimeConfig: {
-    app: {},
-    public: {}
-  }
+  modules: ['@pinia/nuxt']
 })
