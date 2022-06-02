@@ -7,19 +7,12 @@ import { useCount, useModal } from './hooks'
 import styles from './index.module.css'
 
 export default defineComponent({
-  async setup() {
-    const title = ref('')
+  setup() {
+    const title = ref('-')
 
-    const { count, ...countExports } = useCount()
-    const { showModal, ...modalExports } = useModal()
     const { showConfirm } = useDialog()
-    const config = useRuntimeConfig()
-
-    async function handleGetInfo() {
-      const { data } = await useAsyncData('info', () => $fetch('/api/info'))
-
-      title.value = data.value.title
-    }
+    const { ...countHook } = useCount()
+    const { ...modalHook } = useModal()
 
     function handleShowConfirm() {
       showConfirm({
@@ -27,16 +20,17 @@ export default defineComponent({
       })
     }
 
-    // 必须同步执行，否则客户端和服务端不匹配
-    await handleGetInfo()
+    async function handleGetInfo() {
+      const { data } = await useFetch('/api/info')
+
+      console.log(data)
+    }
 
     return {
       title,
-      count,
-      ...countExports,
-      showModal,
-      ...modalExports,
-      handleShowConfirm
+      handleShowConfirm,
+      ...countHook,
+      ...modalHook
     }
   },
   render() {
