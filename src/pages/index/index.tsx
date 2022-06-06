@@ -8,7 +8,7 @@ import styles from './index.module.css'
 
 export default defineComponent({
   setup() {
-    const title = ref('-')
+    const title = ref('SSR Template')
 
     const { showConfirm } = useDialog()
     const { ...countHook } = useCount()
