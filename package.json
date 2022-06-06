@@ -61,13 +61,11 @@
   "lint-staged": {
     "*.{ts,tsx,vue}": [
       "eslint --fix",
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ],
     "*.{css,less,vue}": [
       "stylelint --fix",
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ]
   }
 }
