@@ -20,14 +20,6 @@ export default defineComponent({
       })
     }
 
-    async function handleGetInfo() {
-      const { data } = await useFetch('/api/info')
-
-      console.log(data)
-    }
-
-    handleGetInfo()
-
     return {
       title,
       handleShowConfirm,
@@ -57,7 +49,7 @@ export default defineComponent({
           class={['ant-btn', 'ant-btn-primary', styles.btn]}
           to={{ name: 'other' }}
         >
-          其它
+          页面跳转
         </NuxtLink>
         <Modal
           v-model:visible={this.showModal}
