@@ -9,8 +9,7 @@
     "generate": "nuxt generate",
     "start": "node .output/server/index.mjs",
     "commit": "git add . && git cz",
-    "preview": "nuxt preview",
-    "postinstall": "npx simple-git-hooks"
+    "preview": "nuxt preview"
   },
   "dependencies": {
     "@pinia/nuxt": "0.1.9",
