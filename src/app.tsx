@@ -1,6 +1,4 @@
-import { ConfigProvider } from 'ant-design-vue'
-
-import { useConfig } from './hooks'
+import { NuxtLayout } from '#components'
 
 export default defineComponent({
   name: 'App',
@@ -8,21 +6,13 @@ export default defineComponent({
     useHead({
       title: 'SSR Template'
     })
-
-    const config = useConfig()
-
-    return {
-      config
-    }
   },
   render() {
     return (
-      <div id="app">
-        <ConfigProvider {...this.config}>
-          {/* @ts-ignore */}
-          <NuxtPage />
-        </ConfigProvider>
-      </div>
+      <NuxtLayout>
+        {/* @ts-ignore */}
+        <NuxtPage />
+      </NuxtLayout>
     )
   }
 })

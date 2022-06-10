@@ -1,7 +1,7 @@
-import styles from './custom.module.css'
+import styles from './default.module.css'
 
 export default defineComponent({
-  name: 'CustomLayout',
+  name: 'DefaultLayout',
   render() {
     return <div class={styles.layout}>{this.$slots.default?.()}</div>
   }

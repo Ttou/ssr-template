@@ -1,5 +1,3 @@
-import { Button } from 'ant-design-vue'
-
 import { NuxtLayout } from '#components'
 
 import styles from './index.module.css'
@@ -20,10 +18,10 @@ export default defineComponent({
     return (
       <NuxtLayout name="custom">
         <div class={styles.page}>
-          <h3>其它页面</h3>
-          <Button type="dashed" onClick={this.handleBack}>
+          <h2>其它页面</h2>
+          <button class={styles.btn} onClick={this.handleBack}>
             返回
-          </Button>
+          </button>
         </div>
       </NuxtLayout>
     )
