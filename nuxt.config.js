@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     }
   },
   css: ['@/assets/css/main.css'],
+  modules: ['@pinia/nuxt', '@vueuse/nuxt'],
   vite: {
     css: {
       modules: {
@@ -15,6 +16,5 @@ export default defineNuxtConfig({
       }
     },
     logLevel: 'error'
-  },
-  modules: ['@pinia/nuxt']
+  }
 })

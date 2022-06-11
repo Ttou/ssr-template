@@ -13,8 +13,10 @@
   },
   "dependencies": {
     "@pinia/nuxt": "0.1.9",
+    "@vueuse/core": "8.6.0",
+    "@vueuse/nuxt": "8.6.0",
     "pinia": "2.0.14",
-    "vue": "3.2.36"
+    "vue": "3.2.37"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.0",
@@ -29,7 +31,7 @@
     "eslint-config-prettier": "^8.0.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
-    "eslint-plugin-vue": "^8.0.0",
+    "eslint-plugin-vue": "^9.0.0",
     "lint-staged": "^12.0.0",
     "nuxt": "^3.0.0-rc.3",
     "postcss": "^8.0.0",
@@ -38,7 +40,7 @@
     "simple-git-hooks": "^2.8.0",
     "stylelint": "^14.0.0",
     "stylelint-config-prettier": "^9.0.0",
-    "stylelint-config-standard": "^25.0.0",
+    "stylelint-config-standard": "^26.0.0",
     "typescript": "^4.7.2"
   },
   "browserslist": [

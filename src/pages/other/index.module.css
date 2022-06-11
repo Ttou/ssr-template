@@ -8,6 +8,11 @@
   box-sizing: border-box;
 }
 
+.pos {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
 .btn {
   width: 120px;
   height: 40px;
