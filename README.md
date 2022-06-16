@@ -45,4 +45,3 @@ npm run build
 ## 注意事项
 
 - 装上 volar 插件后更好的支持模板开发
-- rc.4 执行 generate 报错，[issue](https://github.com/nuxt/framework/issues/5450)

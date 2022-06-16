@@ -5,9 +5,17 @@ import styles from './index.module.css'
 
 export default defineComponent({
   setup() {
-    const title = ref('SSR Template')
+    const title = ref('- -')
 
     const { ...countHook } = useCount()
+
+    async function init() {
+      const data = await $fetch('/api/hello')
+
+      title.value = data.title
+    }
+
+    init()
 
     return {
       title,
