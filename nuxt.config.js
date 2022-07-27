@@ -8,7 +8,16 @@ export default defineNuxtConfig({
     }
   },
   css: ['@/assets/css/main.css'],
-  modules: ['@pinia/nuxt', '@vueuse/nuxt'],
+  modules: [
+    [
+      '@pinia/nuxt',
+      {
+        autoImports: ['defineStore']
+      }
+    ],
+    '@nuxtjs/color-mode',
+    '@vueuse/nuxt'
+  ],
   vite: {
     css: {
       modules: {

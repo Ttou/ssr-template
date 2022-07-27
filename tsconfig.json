@@ -3,6 +3,7 @@
   "compilerOptions": {
     "noImplicitThis": true,
     "types": [
+      "@pinia/nuxt",
       "vite/client",
       "./types"
     ]

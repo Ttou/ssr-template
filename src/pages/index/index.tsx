@@ -1,12 +1,13 @@
 import { NuxtLink } from '#components'
 
-import { useCount } from './hooks'
+import { useColor, useCount } from './hooks'
 import styles from './index.module.css'
 
 export default defineComponent({
   setup() {
     const title = ref('- -')
 
+    const { ...colorHook } = useColor()
     const { ...countHook } = useCount()
 
     async function init() {
@@ -19,6 +20,7 @@ export default defineComponent({
 
     return {
       title,
+      ...colorHook,
       ...countHook
     }
   },
@@ -29,6 +31,9 @@ export default defineComponent({
         <p class={styles.count}>{this.count}</p>
         <button class={styles.btn} onClick={this.handleCount}>
           计数
+        </button>
+        <button class={styles.btn} onClick={this.handleToggleMode}>
+          主题
         </button>
         <NuxtLink class={styles.btn} to={{ name: 'other' }}>
           页面跳转

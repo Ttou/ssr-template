@@ -25,3 +25,13 @@ a {
   color: inherit !important;
   text-decoration: inherit !important;
 }
+
+.dark-mode body {
+  background-color: #091a28;
+  color: #ebf4f1;
+}
+
+.light-mode body {
+  background-color: #fff;
+  color: #433422;
+}

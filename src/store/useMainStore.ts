@@ -1,5 +1,3 @@
-import { defineStore } from 'pinia'
-
 export function useMainStore() {
   return defineStore('main', {
     state: () => ({
