@@ -12,7 +12,8 @@ export default defineNuxtConfig({
     [
       '@pinia/nuxt',
       {
-        autoImports: ['defineStore']
+        autoImports: ['defineStore'],
+        disableVuex: true
       }
     ],
     '@nuxtjs/color-mode',
