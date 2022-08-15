@@ -1,4 +1,8 @@
 import { defineNuxtConfig } from 'nuxt'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import Components from 'unplugin-vue-components/vite'
+
+const lifecycle = process.env.npm_lifecycle_event
 
 export default defineNuxtConfig({
   srcDir: 'src/',
@@ -7,13 +11,15 @@ export default defineNuxtConfig({
       link: [{ rel: 'icon', href: '/favicon.ico' }]
     }
   },
-  css: ['@/assets/css/main.css'],
+  build: {
+    transpile: lifecycle === 'build' ? ['element-plus'] : []
+  },
+  css: ['element-plus/dist/index.css', '@/assets/css/main.css'],
   modules: [
     [
       '@pinia/nuxt',
       {
-        autoImports: ['defineStore'],
-        disableVuex: true
+        autoImports: ['defineStore']
       }
     ],
     '@nuxtjs/color-mode',
@@ -25,6 +31,16 @@ export default defineNuxtConfig({
         generateScopedName: '[local]__[hash:base64:5]'
       }
     },
+    plugins: [
+      Components({
+        resolvers: [
+          ElementPlusResolver({
+            importStyle: false,
+            ssr: true
+          })
+        ]
+      })
+    ],
     logLevel: 'error'
   }
 })

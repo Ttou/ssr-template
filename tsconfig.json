@@ -7,5 +7,8 @@
       "vite/client",
       "./types"
     ]
+  },
+  "vueCompilerOptions": {
+    "target": 3
   }
 }
