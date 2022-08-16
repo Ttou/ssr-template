@@ -12,7 +12,17 @@ export default defineNuxtConfig({
     }
   },
   build: {
-    transpile: lifecycle === 'build' ? ['element-plus'] : []
+    transpile:
+      lifecycle === 'build'
+        ? [
+            'element-plus',
+            '@element-plus/icons-vue',
+            '@floating-ui/core',
+            '@floating-ui/dom',
+            '@popperjs/core',
+            'lodash-unified'
+          ]
+        : []
   },
   css: ['element-plus/dist/index.css', '@/assets/css/main.css'],
   modules: [
@@ -22,7 +32,6 @@ export default defineNuxtConfig({
         autoImports: ['defineStore']
       }
     ],
-    '@nuxtjs/color-mode',
     '@vueuse/nuxt'
   ],
   vite: {
@@ -33,6 +42,7 @@ export default defineNuxtConfig({
     },
     plugins: [
       Components({
+        dts: '../types/components.d.ts',
         resolvers: [
           ElementPlusResolver({
             importStyle: false,

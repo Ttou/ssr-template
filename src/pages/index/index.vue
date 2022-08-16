@@ -4,7 +4,7 @@
     <p :class="$style.count">{{ count }}</p>
     <ElSpace :class="$style.btnsWrap" direction="vertical">
       <ElButton @click="handleCount">计数</ElButton>
-      <ElButton @click="handleToggleMode">主题</ElButton>
+      <ElButton @click="handleToggleTheme">主题</ElButton>
       <NuxtLink :to="{ name: 'other' }">
         <ElButton>跳转</ElButton>
       </NuxtLink>
@@ -13,14 +13,14 @@
 </template>
 
 <script lang="ts">
-import { useColor, useCount } from './hooks'
+import { useCount, useTheme } from './hooks'
 
 export default defineComponent({
   setup() {
     const title = ref('- -')
 
-    const { ...colorHook } = useColor()
     const { ...countHook } = useCount()
+    const { ...themeHook } = useTheme()
 
     async function init() {
       const data = await $fetch('/api/hello')
@@ -32,7 +32,7 @@ export default defineComponent({
 
     return {
       title,
-      ...colorHook,
+      ...themeHook,
       ...countHook
     }
   }

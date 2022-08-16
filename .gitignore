@@ -13,4 +13,3 @@ pnpm-lock.yaml
 *.log
 .env
 nuxt.d.ts
-src/components.d.ts

@@ -1,2 +1,2 @@
-export * from './useColor'
 export * from './useCount'
+export * from './useTheme'
