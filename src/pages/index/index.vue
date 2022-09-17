@@ -2,13 +2,13 @@
   <div :class="$style.page">
     <h2>{{ title }}</h2>
     <p :class="$style.count">{{ count }}</p>
-    <ElSpace :class="$style.btnsWrap" direction="vertical">
-      <ElButton @click="handleCount">计数</ElButton>
-      <ElButton @click="handleToggleTheme">主题</ElButton>
+    <ASpace :class="$style.btnsWrap" direction="vertical">
+      <AButton @click="handleCount">计数</AButton>
+      <AButton @click="handleToggleTheme">主题</AButton>
       <NuxtLink :to="{ name: 'other' }">
-        <ElButton>跳转</ElButton>
+        <AButton>跳转</AButton>
       </NuxtLink>
-    </ElSpace>
+    </ASpace>
   </div>
 </template>
 

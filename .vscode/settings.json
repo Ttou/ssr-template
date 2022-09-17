@@ -3,5 +3,7 @@
     "@": "${workspaceFolder}/src"
   },
   "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
   "stylelint.enable": true
 }

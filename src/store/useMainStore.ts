@@ -1,12 +1,15 @@
-export function useMainStore() {
-  return defineStore('main', {
-    state: () => ({
-      count: 0
-    }),
-    actions: {
-      add() {
-        this.count++
-      }
-    }
-  })()
-}
+export const useMainStore = defineStore('main', () => {
+  const count = ref(0)
+
+  /**
+   * 加法
+   */
+  function increment() {
+    count.value++
+  }
+
+  return {
+    count,
+    increment
+  }
+})

@@ -1,8 +1,8 @@
-import { defineNuxtConfig } from 'nuxt'
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import { resolve } from 'path'
+import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/vite'
 
-const lifecycle = process.env.npm_lifecycle_event
+const isDev = process.env.NODE_ENV === 'development'
 
 export default defineNuxtConfig({
   srcDir: 'src/',
@@ -12,19 +12,9 @@ export default defineNuxtConfig({
     }
   },
   build: {
-    transpile:
-      lifecycle === 'build'
-        ? [
-            'element-plus',
-            '@element-plus/icons-vue',
-            '@floating-ui/core',
-            '@floating-ui/dom',
-            '@popperjs/core',
-            'lodash-unified'
-          ]
-        : []
+    transpile: ['lodash-es', isDev ? '' : '@babel/runtime']
   },
-  css: ['element-plus/dist/index.css', '@/assets/css/main.css'],
+  css: ['@/assets/css/main.css'],
   modules: [
     [
       '@pinia/nuxt',
@@ -32,25 +22,39 @@ export default defineNuxtConfig({
         autoImports: ['defineStore']
       }
     ],
-    '@vueuse/nuxt'
+    '@vueuse/nuxt',
+    'nuxt-lodash'
   ],
+  alias: {
+    dayjs: 'dayjs/esm/'
+  },
   vite: {
     css: {
       modules: {
         generateScopedName: '[local]__[hash:base64:5]'
+      },
+      preprocessorOptions: {
+        less: {
+          javascriptEnabled: true,
+          // https://www.antdv.com/docs/vue/customize-theme/#Ant-Design-Vue-Less-variables
+          modifyVars: {}
+        }
       }
     },
+    devBundler: 'vite-node',
     plugins: [
       Components({
-        dts: '../types/components.d.ts',
+        dts: resolve('types/components.d.ts'),
         resolvers: [
-          ElementPlusResolver({
-            importStyle: false,
-            ssr: true
+          AntDesignVueResolver({
+            resolveIcons: false,
+            importStyle: 'less'
           })
         ]
       })
     ],
-    logLevel: 'error'
+    ssr: {
+      noExternal: ['ant-design-vue', 'dayjs']
+    }
   }
 })

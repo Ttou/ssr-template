@@ -3,7 +3,7 @@
     <div :class="$style.page">
       <h2>其它页面</h2>
       <p :class="$style.pos">鼠标位置: {{ x }}, {{ y }}</p>
-      <ElButton :class="$style.btn" @click="handleBack">返回</ElButton>
+      <AButton :class="$style.btn" @click="handleBack">返回</AButton>
     </div>
   </NuxtLayout>
 </template>
