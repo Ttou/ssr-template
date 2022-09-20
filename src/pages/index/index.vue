@@ -9,13 +9,22 @@
         <AButton>跳转</AButton>
       </NuxtLink>
     </ASpace>
+    <div>
+      <h3>图标</h3>
+      <Icon icon="ant-design:alert-twotone" />
+    </div>
   </div>
 </template>
 
 <script lang="ts">
+import { Icon } from '@iconify/vue'
+
 import { useCount, useTheme } from './hooks'
 
 export default defineComponent({
+  components: {
+    Icon
+  },
   setup() {
     const title = ref('- -')
 
