@@ -1,17 +1,36 @@
 <template>
   <div :class="$style.page">
     <h2>{{ title }}</h2>
-    <p :class="$style.count">{{ count }}</p>
-    <ASpace :class="$style.btnsWrap" direction="vertical">
-      <AButton @click="handleCount">计数</AButton>
-      <AButton @click="handleToggleTheme">主题</AButton>
-      <NuxtLink :to="{ name: 'other' }">
-        <AButton>跳转</AButton>
-      </NuxtLink>
-    </ASpace>
-    <div>
-      <h3>图标</h3>
-      <Icon icon="ant-design:alert-twotone" />
+    <div :class="$style.section">
+      <h3>Store</h3>
+      <p :class="$style.count">{{ count }}</p>
+      <AButton @click="handleCount">点击</AButton>
+    </div>
+    <div :class="$style.section">
+      <h3>框架图标</h3>
+      <ASpace>
+        <Icon icon="ant-design:wechat-outlined" />
+        <Icon icon="ant-design:alipay-circle-outlined" />
+      </ASpace>
+    </div>
+    <div :class="$style.section">
+      <h3>自定义图标</h3>
+      <ASpace>
+        <Icon icon="custom:chips" />
+        <Icon icon="custom:coffee" />
+        <Icon icon="custom:coke" />
+        <Icon icon="custom:hamburg" />
+        <Icon icon="custom:ice-cream" />
+      </ASpace>
+    </div>
+    <div :class="$style.section">
+      <h3>其他</h3>
+      <ASpace>
+        <AButton @click="handleToggleTheme">主题</AButton>
+        <NuxtLink :to="{ name: 'other' }">
+          <AButton>跳转</AButton>
+        </NuxtLink>
+      </ASpace>
     </div>
   </div>
 </template>
@@ -64,7 +83,10 @@ export default defineComponent({
   font-size: 18px;
 }
 
-.btnsWrap {
+.section {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
   margin-top: 20px;
 }
 </style>
