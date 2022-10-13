@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "nuxt dev",
     "build": "nuxt build",
+    "generate": "nuxt generate",
     "start": "node .output/server/index.mjs",
     "commit": "git add . && git cz",
     "postinstall": "npx simple-git-hooks"
@@ -14,7 +15,7 @@
     "@iconify/vue": "^4.0.0",
     "@pinia/nuxt": "^0.4.0",
     "@vueuse/core": "^9.0.0",
-    "@vueuse/head": "^0.7.7",
+    "@vueuse/head": "^0.9.7",
     "@vueuse/nuxt": "^9.0.0",
     "ant-design-vue": "^3.0.0",
     "pinia": "^2.0.0",
