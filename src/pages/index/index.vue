@@ -4,7 +4,7 @@
     <div :class="$style.section">
       <h3>Store</h3>
       <p :class="$style.count">{{ count }}</p>
-      <AButton @click="handleCount">点击</AButton>
+      <AButton type="primary" @click="handleCount">点击</AButton>
     </div>
     <div :class="$style.section">
       <h3>框架图标</h3>
@@ -47,8 +47,8 @@ export default defineComponent({
   setup() {
     const title = ref('- -')
 
-    const { ...countHook } = useCount()
-    const { ...themeHook } = useTheme()
+    const countHook = useCount()
+    const themeHook = useTheme()
 
     async function init() {
       const data = await $fetch('/api/hello')

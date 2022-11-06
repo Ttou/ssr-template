@@ -14,7 +14,11 @@ export default defineNuxtConfig({
   build: {
     transpile: ['lodash-es', isDev ? '' : '@babel/runtime']
   },
-  css: ['@/assets/css/main.css'],
+  css: [
+    'ant-design-vue/dist/antd.variable.min.css',
+    '@/assets/css/main.css',
+    '@/assets/css/theme.css'
+  ],
   modules: [
     [
       '@pinia/nuxt',
@@ -32,27 +36,21 @@ export default defineNuxtConfig({
     css: {
       modules: {
         generateScopedName: '[local]__[hash:base64:5]'
-      },
-      preprocessorOptions: {
-        less: {
-          javascriptEnabled: true,
-          // https://www.antdv.com/docs/vue/customize-theme/#Ant-Design-Vue-Less-variables
-          modifyVars: {}
-        }
       }
     },
     devBundler: 'vite-node',
     plugins: [
       Components({
-        dts: resolve('types/components.d.ts'),
+        dts: false,
         resolvers: [
           AntDesignVueResolver({
             resolveIcons: false,
-            importStyle: 'less'
+            importStyle: false
           })
         ]
       })
     ],
+    logLevel: 'error',
     ssr: {
       noExternal: ['ant-design-vue', 'dayjs']
     }
