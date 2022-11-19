@@ -1,4 +1,3 @@
-import { resolve } from 'path'
 import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/vite'
 
@@ -19,16 +18,7 @@ export default defineNuxtConfig({
     '@/assets/css/main.css',
     '@/assets/css/theme.css'
   ],
-  modules: [
-    [
-      '@pinia/nuxt',
-      {
-        autoImports: ['defineStore']
-      }
-    ],
-    '@vueuse/nuxt',
-    'nuxt-lodash'
-  ],
+  modules: ['@pinia/nuxt', '@vueuse/nuxt', 'nuxt-lodash'],
   alias: {
     dayjs: 'dayjs/esm/'
   },
