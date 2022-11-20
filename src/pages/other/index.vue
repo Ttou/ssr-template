@@ -1,9 +1,9 @@
 <template>
   <NuxtLayout name="custom">
-    <div :class="$style.page">
+    <div class="page">
       <h2>其它页面</h2>
-      <p :class="$style.pos">鼠标位置: {{ x }}, {{ y }}</p>
-      <AButton :class="$style.btn" @click="handleBack">返回</AButton>
+      <p class="pos">鼠标位置: {{ x }}, {{ y }}</p>
+      <AButton class="btn" @click="handleBack">返回</AButton>
     </div>
   </NuxtLayout>
 </template>
@@ -27,7 +27,7 @@ export default defineComponent({
 })
 </script>
 
-<style module>
+<style lang="less" scoped>
 .page {
   display: flex;
   align-items: center;
@@ -36,14 +36,14 @@ export default defineComponent({
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-}
 
-.pos {
-  margin-top: 20px;
-  font-size: 18px;
-}
+  .pos {
+    margin-top: 20px;
+    font-size: 18px;
+  }
 
-.btn {
-  margin-top: 20px;
+  .btn {
+    margin-top: 20px;
+  }
 }
 </style>
