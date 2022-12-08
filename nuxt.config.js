@@ -1,5 +1,7 @@
 import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/vite'
+import eslint from 'vite-plugin-eslint'
+import stylelint from 'vite-plugin-stylelint'
 
 const isDev = process.env.NODE_ENV === 'development'
 
@@ -38,7 +40,9 @@ export default defineNuxtConfig({
             importStyle: false
           })
         ]
-      })
+      }),
+      eslint(),
+      stylelint()
     ],
     logLevel: 'error',
     ssr: {
