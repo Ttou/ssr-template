@@ -14,3 +14,5 @@ pnpm-lock.yaml
 *.log
 .env
 nuxt.d.ts
+.eslintcache
+.stylelintcache
