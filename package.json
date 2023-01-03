@@ -8,6 +8,9 @@
     "build": "nuxt build",
     "generate": "nuxt generate",
     "start": "node .output/server/index.mjs",
+    "lint": "concurrently \"npm:lint:*\"",
+    "lint:script": "eslint \"./src/**/*.{ts,tsx,vue}\" --fix",
+    "lint:style": "stylelint \"./src/**/*.{css,less,vue}\" --fix",
     "commit": "git add . && git cz",
     "postinstall": "npx simple-git-hooks"
   },
@@ -29,6 +32,7 @@
     "@typescript-eslint/parser": "^5.0.0",
     "@vue/eslint-config-typescript": "^11.0.0",
     "commitizen": "^4.2.4",
+    "concurrently": "^7.6.0",
     "cz-customizable": "^7.0.0",
     "eslint": "^8.0.0",
     "eslint-config-prettier": "^8.0.0",
