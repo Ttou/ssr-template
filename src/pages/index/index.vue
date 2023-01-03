@@ -38,28 +38,19 @@
 <script lang="ts">
 import { Icon } from '@iconify/vue'
 
-import { useCount, useTheme } from './hooks'
+import { useCount, useInit, useTheme } from './hooks'
 
 export default defineComponent({
   components: {
     Icon
   },
   setup() {
-    const title = ref('- -')
-
+    const initHook = useInit()
     const countHook = useCount()
     const themeHook = useTheme()
 
-    async function init() {
-      const data = await $fetch('/api/hello')
-
-      title.value = data.title
-    }
-
-    init()
-
     return {
-      title,
+      ...initHook,
       ...themeHook,
       ...countHook
     }

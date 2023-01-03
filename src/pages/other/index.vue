@@ -13,7 +13,7 @@ export default defineComponent({
   setup() {
     const router = useRouter()
 
-    const { ...mouseHook } = useMouse()
+    const mouseHook = useMouse()
 
     function handleBack() {
       router.back()

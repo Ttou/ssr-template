@@ -1,17 +1,17 @@
-import { defineStore } from 'pinia'
-
 export const useMainStore = defineStore('main', () => {
-  const count = ref(0)
+  const state = reactive({
+    count: 0
+  })
 
   /**
    * 加法
    */
   function increment() {
-    count.value++
+    state.count++
   }
 
   return {
-    count,
+    ...toRefs(state),
     increment
   }
 })
