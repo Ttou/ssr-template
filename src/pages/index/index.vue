@@ -1,36 +1,36 @@
 <template>
-  <div class="page">
+  <div :class="$style.page">
     <h2>{{ title }}</h2>
-    <div class="section">
+    <div :class="$style.section">
       <h3>Store</h3>
-      <p class="count">{{ count }}</p>
-      <AButton type="primary" @click="handleCount">点击</AButton>
+      <p :class="$style.count">{{ count }}</p>
+      <ElButton type="primary" @click="handleCount">点击</ElButton>
     </div>
-    <div class="section">
+    <div :class="$style.section">
       <h3>框架图标</h3>
-      <ASpace>
+      <ElSpace>
         <Icon icon="ant-design:wechat-outlined" />
         <Icon icon="ant-design:alipay-circle-outlined" />
-      </ASpace>
+      </ElSpace>
     </div>
-    <div class="section">
+    <div :class="$style.section">
       <h3>自定义图标</h3>
-      <ASpace>
+      <ElSpace>
         <Icon icon="custom:chips" />
         <Icon icon="custom:coffee" />
         <Icon icon="custom:coke" />
         <Icon icon="custom:hamburg" />
         <Icon icon="custom:ice-cream" />
-      </ASpace>
+      </ElSpace>
     </div>
-    <div class="section">
+    <div :class="$style.section">
       <h3>其他</h3>
-      <ASpace>
-        <AButton @click="handleToggleTheme">主题</AButton>
+      <ElSpace>
+        <ElButton @click="handleToggleTheme">主题</ElButton>
         <NuxtLink :to="{ name: 'other' }">
-          <AButton>跳转</AButton>
+          <ElButton>跳转</ElButton>
         </NuxtLink>
-      </ASpace>
+      </ElSpace>
     </div>
   </div>
 </template>
@@ -58,7 +58,7 @@ export default defineComponent({
 })
 </script>
 
-<style lang="less" scoped>
+<style module>
 .page {
   display: flex;
   align-items: center;
@@ -67,17 +67,17 @@ export default defineComponent({
   min-height: 100vh;
   padding-bottom: 60px;
   box-sizing: border-box;
+}
 
-  .section {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    margin-top: 20px;
+.section {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-top: 20px;
+}
 
-    .count {
-      margin-top: 20px;
-      font-size: 18px;
-    }
-  }
+.count {
+  margin-top: 20px;
+  font-size: 18px;
 }
 </style>

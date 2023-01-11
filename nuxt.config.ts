@@ -1,0 +1,35 @@
+import eslint from 'vite-plugin-eslint'
+import stylelint from 'vite-plugin-stylelint'
+
+const isDev = process.env.NODE_ENV === 'development'
+
+export default defineNuxtConfig({
+  srcDir: 'src/',
+  app: {
+    head: {
+      link: [{ rel: 'icon', href: '/favicon.ico' }]
+    }
+  },
+  css: ['@/assets/css/main.css', '@/assets/css/theme.css'],
+  modules: [
+    ['@element-plus/nuxt', { importStyle: 'css' }],
+    ['@pinia/nuxt', { autoImports: ['defineStore'] }],
+    '@vueuse/nuxt',
+    'nuxt-lodash'
+  ],
+  vite: {
+    css: {
+      modules: {
+        generateScopedName: '[local]__[hash:base64:5]'
+      }
+    },
+    plugins: [
+      eslint({
+        lintInWorker: true
+      }),
+      stylelint({
+        lintInWorker: true
+      })
+    ]
+  }
+})

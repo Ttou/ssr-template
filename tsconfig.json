@@ -1,15 +1,17 @@
 {
-  "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
     "noImplicitThis": true,
     "types": [
       "@pinia/nuxt",
-      "ant-design-vue/typings/global",
+      "element-plus/global",
       "vite/client",
       "./types"
     ]
   },
   "vueCompilerOptions": {
     "target": 3
-  }
+  },
+  "references": [{
+    "path": "./.nuxt/tsconfig.json"
+  }]
 }
