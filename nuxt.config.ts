@@ -30,6 +30,9 @@ export default defineNuxtConfig({
       stylelint({
         lintInWorker: true
       })
-    ]
+    ],
+    optimizeDeps: {
+      exclude: ['vue-demi']
+    }
   }
 })
