@@ -1,19 +1,19 @@
 <template>
-  <div :class="$style.page">
+  <div class="page">
     <h2>{{ title }}</h2>
-    <div :class="$style.section">
+    <div class="section">
       <h3>Store</h3>
-      <p :class="$style.count">{{ count }}</p>
+      <p class="count">{{ count }}</p>
       <ElButton type="primary" @click="handleCount">点击</ElButton>
     </div>
-    <div :class="$style.section">
+    <div class="section">
       <h3>框架图标</h3>
       <ElSpace>
         <Icon icon="ant-design:wechat-outlined" />
         <Icon icon="ant-design:alipay-circle-outlined" />
       </ElSpace>
     </div>
-    <div :class="$style.section">
+    <div class="section">
       <h3>自定义图标</h3>
       <ElSpace>
         <Icon icon="custom:chips" />
@@ -23,7 +23,7 @@
         <Icon icon="custom:ice-cream" />
       </ElSpace>
     </div>
-    <div :class="$style.section">
+    <div class="section">
       <h3>其他</h3>
       <ElSpace>
         <ElButton @click="handleToggleTheme">主题</ElButton>
@@ -58,7 +58,7 @@ export default defineComponent({
 })
 </script>
 
-<style module>
+<style lang="scss" scoped>
 .page {
   display: flex;
   align-items: center;
@@ -67,17 +67,17 @@ export default defineComponent({
   min-height: 100vh;
   padding-bottom: 60px;
   box-sizing: border-box;
-}
 
-.section {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  margin-top: 20px;
-}
+  .section {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-top: 20px;
 
-.count {
-  margin-top: 20px;
-  font-size: 18px;
+    .count {
+      margin: 20px auto 10px;
+      font-size: 18px;
+    }
+  }
 }
 </style>
