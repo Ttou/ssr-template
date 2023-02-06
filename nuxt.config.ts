@@ -1,4 +1,4 @@
-import eslint from 'vite-plugin-eslint'
+import eslint from 'vite-plugin-eslint2'
 import stylelint from 'vite-plugin-stylelint'
 
 const isDev = process.env.NODE_ENV === 'development'
