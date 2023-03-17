@@ -47,5 +47,6 @@ npm run build
 - 装上 volar 插件后更好的支持模板开发
 - 禁用 vscode 的内置 typescript 语言插件，以便 volar 接管
 - 不要使用 TSX 编写组件，总会出现奇奇怪怪的问题
+- 升级 Nuxt 版本需要先删除 node_modules 和依赖锁定文件
 
 ## 待解决
