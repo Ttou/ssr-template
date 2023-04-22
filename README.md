@@ -50,3 +50,6 @@ npm run build
 - 升级 Nuxt 版本需要先删除 node_modules 和依赖锁定文件
 
 ## 待解决
+
+- @vueuse/core升级到10.0.2后启动报错
+- 等css嵌套支持后替换预处理器

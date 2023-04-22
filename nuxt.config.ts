@@ -1,8 +1,6 @@
 import eslint from 'vite-plugin-eslint2'
 import stylelint from 'vite-plugin-stylelint'
 
-const isDev = process.env.NODE_ENV === 'development'
-
 export default defineNuxtConfig({
   srcDir: 'src/',
   app: {
@@ -33,6 +31,9 @@ export default defineNuxtConfig({
     ],
     optimizeDeps: {
       exclude: ['vue-demi']
+    },
+    build: {
+      chunkSizeWarningLimit: 2048
     }
   }
 })
