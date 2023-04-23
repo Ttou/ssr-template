@@ -51,5 +51,5 @@ npm run build
 
 ## 待解决
 
-- @vueuse/core升级到10.0.2后启动报错
+- @vueuse/core升级到10.0.2后启动报错，等element-plus发新版
 - 等css嵌套支持后替换预处理器
