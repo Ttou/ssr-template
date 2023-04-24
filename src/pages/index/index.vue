@@ -74,8 +74,12 @@ export default defineComponent({
     align-items: center;
     margin-top: 20px;
 
+    h3 {
+      margin-bottom: 20px;
+    }
+
     .count {
-      margin: 20px auto 10px;
+      margin-bottom: 10px;
       font-size: 18px;
     }
   }
