@@ -12,6 +12,7 @@ export default defineNuxtConfig({
   modules: [
     ['@element-plus/nuxt', { importStyle: 'css' }],
     ['@pinia/nuxt', { autoImports: ['defineStore'] }],
+    ['vue-types-nuxt', { shim: true }],
     '@vueuse/nuxt',
     'nuxt-lodash'
   ],
@@ -33,7 +34,17 @@ export default defineNuxtConfig({
       exclude: ['vue-demi']
     },
     build: {
-      chunkSizeWarningLimit: 2048
+      chunkSizeWarningLimit: 2048,
+      reportCompressedSize: false,
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            if (/[\\/]node_modules[\\/]/.test(id)) {
+              return 'chunk-libs'
+            }
+          }
+        }
+      }
     }
   }
 })
