@@ -23,8 +23,7 @@
     "@vueuse/nuxt": "^10.2.0",
     "element-plus": "^2.3.7",
     "pinia": "^2.1.4",
-    "vue": "^3.3.4",
-    "vue-types-nuxt": "^1.0.2"
+    "vue": "^3.3.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.6.5",

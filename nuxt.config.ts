@@ -12,7 +12,6 @@ export default defineNuxtConfig({
   modules: [
     ['@element-plus/nuxt', { importStyle: 'css' }],
     ['@pinia/nuxt', { autoImports: ['defineStore'] }],
-    ['vue-types-nuxt', { shim: true }],
     '@vueuse/nuxt',
     'nuxt-lodash'
   ],
