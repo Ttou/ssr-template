@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   srcDir: 'src/',
   app: {
     head: {
-      link: [{ rel: 'icon', href: '/favicon.ico' }]
+      link: [{ rel: 'icon', type: 'image/svg+xml', href: '/vue.svg' }]
     }
   },
   css: ['@/assets/css/main.css', '@/assets/css/theme.css'],
