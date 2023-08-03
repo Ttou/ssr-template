@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <h2>{{ title }}</h2>
+    <Welcome :msg="title" />
     <div class="section">
       <h3>Store</h3>
       <p class="count">{{ count }}</p>

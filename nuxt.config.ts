@@ -13,8 +13,12 @@ export default defineNuxtConfig({
     ['@element-plus/nuxt', { importStyle: 'css' }],
     ['@pinia/nuxt', { autoImports: ['defineStore'] }],
     '@vueuse/nuxt',
-    'nuxt-lodash'
+    'nuxt-lodash',
+    'vue-types-nuxt'
   ],
+  vueTypes: {
+    shim: true
+  },
   vite: {
     css: {
       modules: {
