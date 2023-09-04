@@ -14,13 +14,10 @@ async function setupIcon() {
     const icon = JSON.parse(files[key])
 
     icons[icon.key] = icon.value
-    iconNames.push(`custom:${icon.key}`)
+    iconNames.push(`@local:custom:${icon.key}`)
   })
 
-  addCollection({
-    prefix: 'custom',
-    icons
-  })
+  addCollection({ prefix: 'custom', icons }, 'local')
   loadIcons(iconNames)
 }
 setupIcon()

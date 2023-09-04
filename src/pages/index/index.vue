@@ -16,11 +16,11 @@
     <div class="section">
       <h3>自定义图标</h3>
       <ElSpace>
-        <Icon icon="custom:chips" />
-        <Icon icon="custom:coffee" />
-        <Icon icon="custom:coke" />
-        <Icon icon="custom:hamburg" />
-        <Icon icon="custom:ice-cream" />
+        <Icon icon="@local:custom:chips" />
+        <Icon icon="@local:custom:coffee" />
+        <Icon icon="@local:custom:coke" />
+        <Icon icon="@local:custom:hamburg" />
+        <Icon icon="@local:custom:ice-cream" />
       </ElSpace>
     </div>
     <div class="section">
