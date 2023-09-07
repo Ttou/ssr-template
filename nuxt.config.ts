@@ -9,6 +9,9 @@ export default defineNuxtConfig({
     }
   },
   css: ['@/assets/css/main.css', '@/assets/css/theme.css'],
+  devtools: {
+    enabled: true
+  },
   modules: [
     ['@element-plus/nuxt', { importStyle: 'css' }],
     ['@pinia/nuxt', { autoImports: ['defineStore'] }],
