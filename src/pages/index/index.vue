@@ -4,33 +4,33 @@
     <div class="section">
       <h3>Store</h3>
       <p class="count">{{ count }}</p>
-      <ElButton type="primary" @click="handleCount">点击</ElButton>
+      <el-button type="primary" @click="handleCount">点击</el-button>
     </div>
     <div class="section">
       <h3>框架图标</h3>
-      <ElSpace>
+      <el-space>
         <Icon icon="ant-design:wechat-outlined" />
         <Icon icon="ant-design:alipay-circle-outlined" />
-      </ElSpace>
+      </el-space>
     </div>
     <div class="section">
       <h3>自定义图标</h3>
-      <ElSpace>
+      <el-space>
         <Icon icon="@local:custom:chips" />
         <Icon icon="@local:custom:coffee" />
         <Icon icon="@local:custom:coke" />
         <Icon icon="@local:custom:hamburg" />
         <Icon icon="@local:custom:ice-cream" />
-      </ElSpace>
+      </el-space>
     </div>
     <div class="section">
       <h3>其他</h3>
-      <ElSpace>
-        <ElButton @click="handleToggleTheme">主题</ElButton>
+      <el-space>
+        <el-button @click="handleToggleTheme">主题</el-button>
         <NuxtLink :to="{ name: 'other' }">
           <ElButton>跳转</ElButton>
         </NuxtLink>
-      </ElSpace>
+      </el-space>
     </div>
   </div>
 </template>
