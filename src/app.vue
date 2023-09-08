@@ -6,11 +6,6 @@
 
 <script lang="ts">
 export default defineComponent({
-  name: 'App',
-  setup() {
-    useHead({
-      title: 'SSR Template'
-    })
-  }
+  name: 'App'
 })
 </script>
