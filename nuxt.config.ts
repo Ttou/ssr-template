@@ -8,7 +8,7 @@ export default defineNuxtConfig({
       link: [{ rel: 'icon', type: 'image/svg+xml', href: '/vue.svg' }]
     }
   },
-  css: ['@/assets/css/main.css', '@/assets/css/theme.css'],
+  css: ['@/assets/styles/main.css'],
   devtools: {
     enabled: true
   },
