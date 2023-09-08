@@ -28,7 +28,7 @@
       <el-space>
         <el-button @click="handleToggleTheme">主题</el-button>
         <NuxtLink :to="{ name: 'other' }">
-          <ElButton>跳转</ElButton>
+          <el-button>跳转</el-button>
         </NuxtLink>
       </el-space>
     </div>
