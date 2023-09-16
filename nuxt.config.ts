@@ -15,9 +15,6 @@ export default defineNuxtConfig({
       'postcss-nested': { preserveEmpty: true }
     }
   },
-  devtools: {
-    enabled: true
-  },
   modules: [
     ['@element-plus/nuxt', { importStyle: 'css' }],
     ['@pinia/nuxt', { autoImports: ['defineStore'] }],
@@ -25,9 +22,8 @@ export default defineNuxtConfig({
     'nuxt-lodash',
     'vue-types-nuxt'
   ],
-  vueTypes: {
-    shim: true
-  },
+  devtools: { enabled: true },
+  vueTypes: { shim: true },
   vite: {
     css: {
       modules: {
