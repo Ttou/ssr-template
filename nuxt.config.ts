@@ -1,4 +1,3 @@
-import postcssNested from 'postcss-nested'
 import eslint from 'vite-plugin-eslint2'
 import stylelint from 'vite-plugin-stylelint'
 
@@ -11,6 +10,11 @@ export default defineNuxtConfig({
     }
   },
   css: ['@/assets/styles/main.css'],
+  postcss: {
+    plugins: {
+      'postcss-nested': { preserveEmpty: true }
+    }
+  },
   devtools: {
     enabled: true
   },
@@ -28,9 +32,6 @@ export default defineNuxtConfig({
     css: {
       modules: {
         generateScopedName: '[local]__[hash:base64:5]'
-      },
-      postcss: {
-        plugins: [postcssNested({ preserveEmpty: true })]
       }
     },
     plugins: [
