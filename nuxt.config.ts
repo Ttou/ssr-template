@@ -46,19 +46,7 @@ export default defineNuxtConfig({
     },
     build: {
       chunkSizeWarningLimit: 2048,
-      reportCompressedSize: false,
-      rollupOptions: {
-        output: {
-          chunkFileNames: 'js/[name]-[hash].js',
-          entryFileNames: 'js/[name]-[hash].js',
-          assetFileNames: '[ext]/[name]-[hash].[ext]',
-          manualChunks(id) {
-            if (/[\\/]node_modules[\\/]/.test(id)) {
-              return 'chunk-libs'
-            }
-          }
-        }
-      }
+      reportCompressedSize: false
     }
   }
 })
