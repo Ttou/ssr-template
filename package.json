@@ -23,7 +23,6 @@
     "@vueuse/nuxt": "^10.4.1",
     "element-plus": "^2.3.14",
     "nuxt": "^3.7.3",
-    "nuxt-lodash": "^2.5.0",
     "pinia": "^2.1.6",
     "vue": "^3.3.4"
   },
@@ -58,8 +57,6 @@
     "stylelint-config-standard": "^34.0.0",
     "tsx": "^3.12.10",
     "typescript": "^5.1.6",
-    "vite-plugin-eslint2": "^4.1.0",
-    "vite-plugin-stylelint": "^5.1.1",
     "vue-types-nuxt": "^2.0.1"
   },
   "browserslist": [
