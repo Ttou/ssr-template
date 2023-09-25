@@ -1,3 +1,5 @@
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+
 export default defineNuxtConfig({
   srcDir: 'src/',
   app: {
@@ -6,20 +8,26 @@ export default defineNuxtConfig({
       title: 'SSR Template'
     }
   },
-  css: ['@/assets/styles/main.css'],
+  css: ['@/assets/styles/element-vars.css', '@/assets/styles/main.css'],
   postcss: {
     plugins: {
       'postcss-nested': { preserveEmpty: true }
     }
   },
   modules: [
-    ['@element-plus/nuxt', { importStyle: 'css' }],
     ['@pinia/nuxt', { autoImports: ['defineStore'] }],
     '@vueuse/nuxt',
-    'vue-types-nuxt'
+    'vue-types-nuxt',
+    [
+      'unplugin-vue-components/nuxt',
+      {
+        dts: false,
+        dirs: [],
+        resolvers: [ElementPlusResolver({ importStyle: false })]
+      }
+    ]
   ],
   devtools: { enabled: true },
-  vueTypes: { shim: true },
   vite: {
     css: {
       modules: {
