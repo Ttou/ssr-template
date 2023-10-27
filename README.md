@@ -48,7 +48,6 @@ npm run build
 - 禁用 vscode 的内置 typescript 语言插件，以便 volar 接管
 - 不要使用 TSX 编写组件，总会出现奇奇怪怪的问题
 - 升级 Nuxt 版本需要先删除 node_modules 和依赖锁定文件
+- Node 版本需要 18 及以上
 
 ## 待解决
-
-- 等css嵌套支持后替换预处理器
