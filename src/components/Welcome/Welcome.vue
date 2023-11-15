@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts">
-import { welcomeProps } from './Welcome.constant'
+import { welcomeProps } from './define'
 
 export default defineComponent({
   name: 'Welcome',
