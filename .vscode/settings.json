@@ -10,9 +10,12 @@
     "commitlint",
     "demi",
     "iconify",
+    "nuxi",
     "Nuxt",
     "pinia",
+    "preinstall",
     "stylelint",
+    "unplugin",
     "vueuse"
   ],
   "typescript.tsdk": "node_modules/typescript/lib"

@@ -10,7 +10,7 @@
     "start": "node .output/server/index.mjs",
     "gen:icons": "tsx scripts/genIcons.mts",
     "lint": "concurrently \"npm:lint:*\"",
-    "lint:script": "eslint \"./src/**/*.{ts,vue}\" --fix",
+    "lint:script": "eslint \"./src/**/*.{ts,tsx,vue}\" --fix",
     "lint:style": "stylelint \"./src/**/*.{css,vue}\" --fix",
     "commit": "git add . && git cz",
     "preinstall": "npx only-allow pnpm",
@@ -70,7 +70,7 @@
     }
   },
   "lint-staged": {
-    "*.{ts,vue}": [
+    "*.{ts,tsx,vue}": [
       "eslint --fix",
       "prettier --write"
     ],
