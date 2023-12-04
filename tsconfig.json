@@ -2,7 +2,17 @@
   "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
     "noImplicitThis": true,
-    "types": ["@pinia/nuxt", "element-plus/global", "vite/client", "./types"]
+    "types": [
+      "@pinia/nuxt",
+      "element-plus/global",
+      "vite/client",
+      "./types"
+    ],
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules"
+      }
+    ]
   },
   "vueCompilerOptions": {
     "target": 3

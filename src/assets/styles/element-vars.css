@@ -3,4 +3,5 @@
 
 /* 修改css变量 */
 :root {
+  --el-color-primary: teal;
 }
