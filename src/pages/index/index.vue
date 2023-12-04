@@ -64,8 +64,7 @@ export default defineComponent({
   align-items: center;
   justify-content: center;
   flex-flow: column nowrap;
-  min-height: 100vh;
-  padding-bottom: 60px;
+  height: 100%;
   box-sizing: border-box;
 
   .section {
