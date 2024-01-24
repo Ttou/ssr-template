@@ -29,11 +29,6 @@ export default defineNuxtConfig({
   ],
   devtools: { enabled: true },
   vite: {
-    css: {
-      modules: {
-        generateScopedName: '[local]__[hash:base64:5]'
-      }
-    },
     optimizeDeps: {
       exclude: ['vue-demi']
     },
