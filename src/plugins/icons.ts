@@ -2,7 +2,8 @@ import type { IconifyIcons } from '@iconify/types'
 import { addCollection, loadIcons } from '@iconify/vue'
 
 const files = import.meta.glob('~/assets/icons/json/*.json', {
-  as: 'raw',
+  query: '?raw',
+  import: 'default',
   eager: true
 })
 
