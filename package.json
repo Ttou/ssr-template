@@ -4,7 +4,7 @@
   "repository": "git@gitee.com:jh_shot/ssr-template.git",
   "license": "MulanPSL2",
   "scripts": {
-    "dev": "nuxi dev",
+    "dev": "nuxi dev --host",
     "build": "nuxi build",
     "generate": "nuxi generate",
     "start": "node .output/server/index.mjs",
