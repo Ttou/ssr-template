@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "nuxi dev --host",
     "build": "nuxi build",
-    "generate": "nuxi generate",
     "start": "node .output/server/index.mjs",
     "gen:icons": "tsx scripts/genIcons.mts",
     "lint": "concurrently \"npm:lint:*\"",
