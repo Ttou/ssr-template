@@ -27,6 +27,7 @@ export default defineNuxtConfig({
       }
     ]
   ],
+  components: true,
   devtools: { enabled: true },
   vite: {
     optimizeDeps: {
