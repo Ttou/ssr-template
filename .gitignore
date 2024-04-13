@@ -3,16 +3,8 @@ node_modules
 .idea
 .nuxt
 .output
-dist
 
 # lock files
 package-lock.json
 yarn.lock
 pnpm-lock.yaml
-
-# other files
-*.log
-.env
-nuxt.d.ts
-.eslintcache
-.stylelintcache

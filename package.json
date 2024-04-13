@@ -33,7 +33,6 @@
     "@iconify/tools": "^4.0.4",
     "@inquirer/checkbox": "^2.2.2",
     "@nuxt/devtools": "^1.1.5",
-    "@ttou/define-config": "^3.2.0",
     "@typescript-eslint/eslint-plugin": "^7.6.0",
     "@typescript-eslint/parser": "^7.6.0",
     "@vue/eslint-config-typescript": "^13.0.0",

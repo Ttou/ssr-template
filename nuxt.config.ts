@@ -1,3 +1,4 @@
+import { type Options as PostCSSNestedOptions } from 'postcss-nested'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 export default defineNuxtConfig({
@@ -11,7 +12,7 @@ export default defineNuxtConfig({
   css: ['@/assets/styles/element-vars.css', '@/assets/styles/main.css'],
   postcss: {
     plugins: {
-      'postcss-nested': { preserveEmpty: true }
+      'postcss-nested': { preserveEmpty: true } as PostCSSNestedOptions
     }
   },
   modules: [

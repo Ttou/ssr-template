@@ -1,9 +1,10 @@
-const { definePrettierConfig } = require('@ttou/define-config')
-
-module.exports = definePrettierConfig({
+/**
+ * @type {import('prettier').Config}
+ */
+module.exports = {
   semi: false,
   singleQuote: true,
   endOfLine: 'auto',
   trailingComma: 'none',
   arrowParens: 'avoid'
-})
+}
