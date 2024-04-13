@@ -16,6 +16,7 @@
     "pinia",
     "preinstall",
     "stylelint",
+    "typecheck",
     "unplugin",
     "vueuse"
   ]
