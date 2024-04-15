@@ -10,9 +10,9 @@
     "start": "node .output/server/index.mjs",
     "scripts": "tsx scripts",
     "upgrade": "nuxi upgrade --force",
-    "check": "nuxi typecheck",
     "lint": "biome check --apply .",
     "lint:style": "stylelint \"**/*.{css,vue}\" --fix",
+    "check": "nuxi typecheck",
     "commit": "git add . && git cz",
     "preinstall": "npx only-allow pnpm",
     "postinstall": "npx simple-git-hooks"
