@@ -7,16 +7,16 @@ const files: any = import.meta.glob('~/assets/icons/json/*.json', {
   eager: true
 })
 
-export default defineNuxtPlugin(nuxtApp => {
+export default defineNuxtPlugin((nuxtApp) => {
   const icons = {} as IconifyIcons
   const iconNames = [] as string[]
 
-  Object.keys(files).forEach(key => {
+  for (const key of Object.keys(files)) {
     const icon = JSON.parse(files[key])
 
     icons[icon.key] = icon.value
     iconNames.push(`@local:custom:${icon.key}`)
-  })
+  }
 
   addCollection({ prefix: 'custom', icons }, 'local')
   loadIcons(iconNames)

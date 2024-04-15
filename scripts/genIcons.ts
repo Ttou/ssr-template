@@ -7,7 +7,7 @@ import {
 } from 'node:fs'
 import { basename } from 'node:path'
 
-import { cleanupSVG, SVG } from '@iconify/tools'
+import { SVG, cleanupSVG } from '@iconify/tools'
 import { globbySync } from 'globby'
 
 import { resolve } from './util'
@@ -25,7 +25,7 @@ export async function genIcons() {
     mkdirSync(iconsJsonPath)
   }
 
-  files.forEach(file => {
+  for (const file of files) {
     const content = readFileSync(file, { encoding: 'utf-8' })
 
     const svg = new SVG(content)
@@ -43,5 +43,5 @@ export async function genIcons() {
     }
 
     writeFileSync(`${iconsJsonPath}/${fileName}.json`, JSON.stringify(icon))
-  })
+  }
 }

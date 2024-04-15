@@ -10,7 +10,7 @@ const answer = await checkbox({
     { type: 'separator', separator: separator('Default') },
     { name: 'genIcons', value: 'genIcons' }
   ]
-}).catch(err => {})
+}).catch((err) => {})
 
 for (const [k, v] of Object.entries(
   pick(

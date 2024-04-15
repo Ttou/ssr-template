@@ -1,10 +1,6 @@
 {
   "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
-    "types": [
-      "@pinia/nuxt",
-      "element-plus/global",
-      "./types"
-    ]
+    "types": ["@pinia/nuxt", "element-plus/global", "./types"]
   }
 }

@@ -1,4 +1,4 @@
-import { type Options as PostCSSNestedOptions } from 'postcss-nested'
+import type { Options as PostCSSNestedOptions } from 'postcss-nested'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 export default defineNuxtConfig({
