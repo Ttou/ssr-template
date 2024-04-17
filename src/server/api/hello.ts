@@ -1,5 +1,3 @@
 export default defineEventHandler((event) => {
-  return {
-    title: 'Hello Nuxt'
-  }
+  return 'Hello Nuxt'
 })
