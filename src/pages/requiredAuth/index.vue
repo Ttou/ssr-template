@@ -5,6 +5,7 @@
         <span>需鉴权页</span>
       </template>
       <el-button type="primary" @click="handleLogout">退出登录</el-button>
+      <el-button type="primary" @click="handleBackHome">返回首页</el-button>
     </el-card>
   </div>
 </template>
@@ -20,8 +21,13 @@ export default defineComponent({
       })
     }
 
+    function handleBackHome() {
+      navigateTo('/')
+    }
+
     return {
-      handleLogout
+      handleLogout,
+      handleBackHome
     }
   }
 })
