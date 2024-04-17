@@ -28,8 +28,8 @@ export default defineNuxtConfig({
     ],
     'vue-types-nuxt'
   ],
-  pinia: {
-    storesDirs: ['./src/store/**']
+  imports: {
+    dirs: ['apis', 'store']
   },
   components: true,
   devtools: { enabled: true },

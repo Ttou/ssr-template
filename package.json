@@ -67,7 +67,9 @@
     }
   },
   "lint-staged": {
-    "*.{ts,tsx,vue}": ["biome check --files-ignore-unknown=true"],
+    "*.{ts,tsx,vue}": [
+      "biome check --files-ignore-unknown=true --no-errors-on-unmatched"
+    ],
     "*.{css,vue}": ["stylelint --max-warnings 0"]
   },
   "simple-git-hooks": {

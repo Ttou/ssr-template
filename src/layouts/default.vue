@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style.layout">
+  <div class="layout">
     <slot />
   </div>
 </template>
@@ -9,10 +9,3 @@ export default defineComponent({
   name: 'DefaultLayout'
 })
 </script>
-
-<style module>
-.layout {
-  width: 100%;
-  height: 100%;
-}
-</style>

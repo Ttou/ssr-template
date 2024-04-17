@@ -26,9 +26,9 @@
     <div class="section">
       <h3>其他</h3>
       <el-space>
-        <el-button @click="handleToggleTheme">主题</el-button>
-        <NuxtLink :to="{ name: 'other' }">
-          <el-button>跳转</el-button>
+        <el-button @click="handleToggleTheme">切换主题</el-button>
+        <NuxtLink to="/requiredAuth">
+          <el-button>跳转需鉴权页</el-button>
         </NuxtLink>
       </el-space>
     </div>
@@ -64,7 +64,6 @@ export default defineComponent({
   align-items: center;
   justify-content: center;
   flex-flow: column nowrap;
-  height: 100%;
   box-sizing: border-box;
 
   .section {
