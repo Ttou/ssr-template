@@ -15,17 +15,6 @@ body {
   overflow-x: hidden;
 }
 
-ul,
-li,
-ol {
-  list-style: none;
-}
-
-a {
-  color: inherit !important;
-  text-decoration: inherit !important;
-}
-
 .dark-mode body {
   background-color: #091a28;
   color: #ebf4f1;

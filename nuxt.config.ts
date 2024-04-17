@@ -9,7 +9,7 @@ export default defineNuxtConfig({
       title: 'SSR Template'
     }
   },
-  css: ['@/assets/styles/element-vars.css', '@/assets/styles/main.css'],
+  css: ['@/assets/styles/main.css', '@/assets/styles/element-vars.css'],
   postcss: {
     plugins: {
       'postcss-nested': { preserveEmpty: true } as PostCSSNestedOptions
@@ -18,7 +18,6 @@ export default defineNuxtConfig({
   modules: [
     ['@pinia/nuxt', { autoImports: ['defineStore'] }],
     '@vueuse/nuxt',
-    'vue-types-nuxt',
     [
       'unplugin-vue-components/nuxt',
       {
@@ -26,11 +25,20 @@ export default defineNuxtConfig({
         dirs: [],
         resolvers: [ElementPlusResolver({ importStyle: false })]
       }
-    ]
+    ],
+    'vue-types-nuxt'
   ],
+  pinia: {
+    storesDirs: ['./src/store/**']
+  },
   components: true,
   devtools: { enabled: true },
   vite: {
+    css: {
+      modules: {
+        generateScopedName: '[local]__[hash:base64:5]'
+      }
+    },
     optimizeDeps: {
       exclude: ['vue-demi']
     },
