@@ -29,7 +29,7 @@ export default defineNuxtConfig({
     'vue-types-nuxt'
   ],
   imports: {
-    dirs: ['apis', 'store']
+    dirs: ['apis', 'stores']
   },
   components: true,
   devtools: { enabled: true },
