@@ -47,5 +47,6 @@ npm run build
 - 装上 volar 插件后更好的支持模板开发
 - 升级 Nuxt 版本需要先删除 node_modules 和依赖锁定文件
 - Node 版本需要 18 及以上
+- 使用 useCookie 保存登录状态，前后端通用
 
 ## 待解决
