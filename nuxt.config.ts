@@ -16,7 +16,7 @@ export default defineNuxtConfig({
     }
   },
   modules: [
-    ['@pinia/nuxt', { autoImports: ['defineStore'] }],
+    '@pinia/nuxt',
     '@vueuse/nuxt',
     [
       'unplugin-vue-components/nuxt',
