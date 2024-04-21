@@ -12,10 +12,13 @@ export default defineNuxtPlugin((nuxtApp) => {
     onResponseError({ response }) {
       const { statusCode, message } = response._data
 
-      ElMessage.error({
-        message: `【${statusCode}】${message}`,
-        duration: 1500
-      })
+      ElMessage.error(
+        {
+          message: `【${statusCode}】${message}`,
+          duration: 1500
+        },
+        nuxtApp.vueApp._context
+      )
     }
   })
 })

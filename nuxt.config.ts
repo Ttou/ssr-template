@@ -9,7 +9,11 @@ export default defineNuxtConfig({
       title: 'SSR Template'
     }
   },
-  css: ['@/assets/styles/main.css', '@/assets/styles/element-vars.css'],
+  css: [
+    '@/assets/styles/element-vars.css',
+    '@/assets/styles/element-reset.css',
+    '@/assets/styles/main.css'
+  ],
   postcss: {
     plugins: {
       'postcss-nested': { preserveEmpty: true } as PostCSSNestedOptions

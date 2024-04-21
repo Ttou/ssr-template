@@ -48,5 +48,8 @@ npm run build
 - 升级 Nuxt 版本需要先删除 node_modules 和依赖锁定文件
 - Node 版本需要 18 及以上
 - 使用 useCookie 保存登录状态，前后端通用
+- ElementPlus 用到 Teleports 的组件需要 `ClientOnly` 包裹
+- 非组件内调用的 ElMessage 等需要注入当前的 context
+- 枚举值作为类型使用时要用 `import type` 导入
 
 ## 待解决
