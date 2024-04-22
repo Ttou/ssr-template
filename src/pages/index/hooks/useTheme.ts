@@ -1,12 +1,8 @@
 export function useTheme() {
-  const isDark = useDark({
-    valueDark: 'dark-mode',
-    valueLight: 'light-mode'
-  })
-  const toggleDark = useToggle(isDark)
+  const colorMode = useColorMode()
 
   function handleToggleTheme() {
-    toggleDark()
+    colorMode.preference = colorMode.preference === 'light' ? 'dark' : 'light'
   }
 
   return {

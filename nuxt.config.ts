@@ -12,6 +12,7 @@ export default defineNuxtConfig({
   css: [
     '@/assets/styles/element-vars.css',
     '@/assets/styles/element-reset.css',
+    '@/assets/styles/vars.css',
     '@/assets/styles/main.css'
   ],
   postcss: {
@@ -20,6 +21,7 @@ export default defineNuxtConfig({
     }
   },
   modules: [
+    '@nuxtjs/color-mode',
     '@pinia/nuxt',
     '@vueuse/nuxt',
     [
