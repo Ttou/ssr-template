@@ -38,7 +38,7 @@
 <script lang="ts">
 import { Icon } from '@iconify/vue'
 
-import { useCount, useInit, useTheme } from './hooks'
+import { useCount, useInit } from './hooks'
 
 export default defineComponent({
   components: {
@@ -47,11 +47,9 @@ export default defineComponent({
   setup() {
     const initHook = useInit()
     const countHook = useCount()
-    const themeHook = useTheme()
 
     return {
       ...initHook,
-      ...themeHook,
       ...countHook
     }
   }
