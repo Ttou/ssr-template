@@ -34,6 +34,9 @@ export default defineNuxtConfig({
     ],
     'vue-types-nuxt'
   ],
+  colorMode: {
+    classSuffix: ''
+  },
   imports: {
     dirs: ['apis', 'stores']
   },
