@@ -3,8 +3,6 @@ export function useInit() {
     title: '- -'
   })
 
-  const { handleToggleTheme } = useTheme()
-
   async function init() {
     const data = await $fetch('/api/hello')
 
@@ -14,7 +12,6 @@ export function useInit() {
   init()
 
   return {
-    ...toRefs(state),
-    handleToggleTheme
+    ...toRefs(state)
   }
 }

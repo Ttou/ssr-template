@@ -26,7 +26,7 @@
     <div class="section">
       <h3>其他</h3>
       <el-space>
-        <el-button @click="handleToggleTheme">切换主题</el-button>
+        <el-button @click="toggleDark()">切换主题</el-button>
         <NuxtLink to="/requiredAuth">
           <el-button>跳转需鉴权页</el-button>
         </NuxtLink>
@@ -47,10 +47,12 @@ export default defineComponent({
   setup() {
     const initHook = useInit()
     const countHook = useCount()
+    const themeHook = useTheme()
 
     return {
       ...initHook,
-      ...countHook
+      ...countHook,
+      ...themeHook
     }
   }
 })

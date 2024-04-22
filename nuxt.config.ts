@@ -35,6 +35,7 @@ export default defineNuxtConfig({
     'vue-types-nuxt'
   ],
   colorMode: {
+    preference: 'light',
     classSuffix: ''
   },
   imports: {

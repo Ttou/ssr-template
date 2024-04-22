@@ -5,17 +5,13 @@ export enum ColorModeEnum {
 
 export function useTheme() {
   const colorMode = useColorMode()
-
-  function handleToggleTheme() {
-    if (colorMode.preference !== ColorModeEnum.DARK) {
-      colorMode.preference = ColorModeEnum.DARK
-    } else {
-      colorMode.preference = ColorModeEnum.LIGHT
-    }
-  }
+  const toggleDark = useToggle(toRef(colorMode, 'preference'), {
+    truthyValue: ColorModeEnum.DARK,
+    falsyValue: ColorModeEnum.LIGHT
+  })
 
   return {
     colorMode,
-    handleToggleTheme
+    toggleDark
   }
 }
