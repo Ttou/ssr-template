@@ -11,7 +11,6 @@ export function useTheme() {
   })
 
   return {
-    colorMode,
     toggleDark
   }
 }
