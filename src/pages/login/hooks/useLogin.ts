@@ -17,7 +17,7 @@ export function useLogin() {
   const mainStore = useMainStore()
 
   function handleLogin() {
-    state.formRef.validate((valid) => {
+    state.formRef.validate(valid => {
       if (valid) {
         state.loading = true
 

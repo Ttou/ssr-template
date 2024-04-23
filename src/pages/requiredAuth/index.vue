@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <el-card style="width: 500px;">
+    <el-card style="width: 500px">
       <template #header>
         <span>需鉴权页</span>
       </template>

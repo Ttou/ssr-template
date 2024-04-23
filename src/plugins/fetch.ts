@@ -1,6 +1,6 @@
 import { ElMessage } from 'element-plus'
 
-export default defineNuxtPlugin((nuxtApp) => {
+export default defineNuxtPlugin(nuxtApp => {
   globalThis.$fetch = $fetch.create({
     onRequest({ options }) {
       const { token } = useMainStore()

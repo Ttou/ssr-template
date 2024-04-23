@@ -7,7 +7,7 @@ const files: any = import.meta.glob('~/assets/icons/json/*.json', {
   eager: true
 })
 
-export default defineNuxtPlugin((nuxtApp) => {
+export default defineNuxtPlugin(nuxtApp => {
   const icons = {} as IconifyIcons
   const iconNames = [] as string[]
 

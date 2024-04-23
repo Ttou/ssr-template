@@ -1,3 +1,3 @@
-export default defineEventHandler((event) => {
+export default defineEventHandler(event => {
   return 'Hello Nuxt'
 })

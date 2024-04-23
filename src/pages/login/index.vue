@@ -7,7 +7,7 @@
         :rules="formRules"
         labelWidth="80px"
         labelPosition="right"
-        >
+      >
         <el-form-item label="用户名" prop="username">
           <el-input v-model="formModel.username" />
         </el-form-item>
@@ -15,7 +15,9 @@
           <el-input v-model="formModel.password" />
         </el-form-item>
         <el-form-item>
-          <el-button class="loginBtn" type="primary" @click="handleLogin">登录</el-button>
+          <el-button class="loginBtn" type="primary" @click="handleLogin"
+            >登录</el-button
+          >
         </el-form-item>
       </el-form>
     </div>
