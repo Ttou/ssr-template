@@ -31,10 +31,11 @@ import { useLogin } from './hooks'
 export default defineComponent({
   setup() {
     const loginHook = useLogin()
+    const config = useRuntimeConfig()
 
     return {
       ...loginHook,
-      title: process.env.APP_TITLE
+      title: config.public.title
     }
   }
 })

@@ -54,5 +54,10 @@ export default defineNuxtConfig({
     build: {
       reportCompressedSize: false
     }
+  },
+  runtimeConfig: {
+    public: {
+      title: process.env.APP_TITLE
+    }
   }
 })
