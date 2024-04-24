@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       link: [{ rel: 'icon', type: 'image/svg+xml', href: '/vue.svg' }],
-      title: 'SSR Template'
+      title: process.env.APP_TITLE
     }
   },
   css: [

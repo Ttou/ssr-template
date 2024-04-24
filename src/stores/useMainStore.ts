@@ -1,7 +1,7 @@
 export const useMainStore = defineStore('main', () => {
   const state = reactive({
     count: 0,
-    token: useCookie('token', { maxAge: 60 * 60 * 24 * 3 })
+    token: useCookie('token')
   })
 
   /**
@@ -25,7 +25,7 @@ export const useMainStore = defineStore('main', () => {
    * 退出
    */
   async function handleLogout() {
-    state.token = ''
+    state.token = undefined
   }
 
   return {

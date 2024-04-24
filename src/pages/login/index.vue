@@ -1,6 +1,7 @@
 <template>
   <div class="page">
     <div class="formWrap">
+      <p class="title">{{ title }}</p>
       <el-form
         ref="formRef"
         :model="formModel"
@@ -12,12 +13,12 @@
           <el-input v-model="formModel.username" />
         </el-form-item>
         <el-form-item label="密码" prop="password">
-          <el-input v-model="formModel.password" />
+          <el-input v-model="formModel.password" type="password" />
         </el-form-item>
         <el-form-item>
-          <el-button class="loginBtn" type="primary" @click="handleLogin"
-            >登录</el-button
-          >
+          <el-button class="loginBtn" type="primary" @click="handleLogin">
+            登录
+          </el-button>
         </el-form-item>
       </el-form>
     </div>
@@ -32,7 +33,8 @@ export default defineComponent({
     const loginHook = useLogin()
 
     return {
-      ...loginHook
+      ...loginHook,
+      title: process.env.APP_TITLE
     }
   }
 })
@@ -47,6 +49,14 @@ export default defineComponent({
 .formWrap {
   width: 400px;
   margin-top: 100px;
+}
+
+.title {
+  margin-left: 80px;
+  margin-bottom: 40px;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .loginBtn {
