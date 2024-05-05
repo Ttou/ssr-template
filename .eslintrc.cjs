@@ -19,6 +19,7 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'simple-import-sort', 'prettier'],
   rules: {
+    'no-undef': 'off',
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
     'prettier/prettier': 'error',
