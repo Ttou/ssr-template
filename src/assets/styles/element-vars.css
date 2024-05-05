@@ -1,5 +1,5 @@
-@import url("element-plus/dist/index.css");
-@import url("element-plus/theme-chalk/dark/css-vars.css");
+@import url('element-plus/dist/index.css');
+@import url('element-plus/theme-chalk/dark/css-vars.css');
 
 /* 修改css变量 */
 :root {

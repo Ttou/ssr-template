@@ -10,6 +10,8 @@
     "start": "node .output/server/index.mjs",
     "scripts": "tsx scripts",
     "upgrade": "nuxi upgrade --force",
+    "lint:js": "eslint \"**/*.{ts,tsx,vue}\" --fix",
+    "lint:css": "stylelint \"**/*.{css,vue}\" --fix",
     "check": "nuxi typecheck",
     "commit": "git add . && git cz",
     "preinstall": "npx only-allow pnpm",

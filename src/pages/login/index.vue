@@ -6,8 +6,8 @@
         ref="formRef"
         :model="formModel"
         :rules="formRules"
-        labelWidth="80px"
-        labelPosition="right"
+        label-width="80px"
+        label-position="right"
       >
         <el-form-item label="用户名" prop="username">
           <el-input v-model="formModel.username" />

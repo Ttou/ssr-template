@@ -7,7 +7,7 @@ import {
 } from 'node:fs'
 import { basename } from 'node:path'
 
-import { SVG, cleanupSVG } from '@iconify/tools'
+import { cleanupSVG, SVG } from '@iconify/tools'
 import { globbySync } from 'globby'
 
 import { resolve } from './util'
