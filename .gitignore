@@ -3,6 +3,8 @@ node_modules
 .idea
 .nuxt
 .output
+.DS_Store
+
 
 # lock files
 package-lock.json
