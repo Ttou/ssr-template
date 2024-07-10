@@ -3,23 +3,27 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 export default defineNuxtConfig({
   srcDir: 'src/',
+
   app: {
     head: {
       link: [{ rel: 'icon', type: 'image/svg+xml', href: '/vue.svg' }],
       title: process.env.APP_TITLE
     }
   },
+
   css: [
     '@/assets/styles/element-vars.css',
     '@/assets/styles/element-reset.css',
     '@/assets/styles/theme.css',
     '@/assets/styles/main.css'
   ],
+
   postcss: {
     plugins: {
       'postcss-nested': { preserveEmpty: true } as PostCSSNestedOptions
     }
   },
+
   modules: [
     '@nuxtjs/color-mode',
     '@pinia/nuxt',
@@ -34,14 +38,18 @@ export default defineNuxtConfig({
     ],
     'vue-types-nuxt'
   ],
+
   colorMode: {
     classSuffix: ''
   },
+
   imports: {
     dirs: ['apis', 'stores']
   },
+
   components: true,
   devtools: { enabled: true },
+
   vite: {
     css: {
       modules: {
@@ -55,9 +63,12 @@ export default defineNuxtConfig({
       reportCompressedSize: false
     }
   },
+
   runtimeConfig: {
     public: {
       title: process.env.APP_TITLE
     }
-  }
+  },
+
+  compatibilityDate: '2024-07-10'
 })
